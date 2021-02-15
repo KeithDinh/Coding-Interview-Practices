@@ -12,3 +12,13 @@ class Solution:
                 st += k
                 
         return st
+
+
+# USING COUNTER
+class Solution:
+    def frequencySort(self, s: str) -> str:
+        result = ''
+        for (i,j) in collections.Counter(s).most_common(): 
+            result += i*j
+        
+        return result
