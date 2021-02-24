@@ -30,7 +30,7 @@ Binary
 Dynamic Programming
 
 V Climbing Stairs - https://leetcode.com/problems/climbing-stairs/
-- Coin Change - https://leetcode.com/problems/coin-change/
+V Coin Change - https://leetcode.com/problems/coin-change/
 - Longest Increasing Subsequence - https://leetcode.com/problems/longest-increasing-subsequence/
 - Longest Common Subsequence -
 - Word Break Problem - https://leetcode.com/problems/word-break/
