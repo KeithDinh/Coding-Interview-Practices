@@ -1,28 +1,21 @@
+import collections
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
+        d = collections.Counter(s)
         stack = []
-        d = {}
         
-        # count the number of occurrence of each char
-        for i in s:
-            if i not in d:
-                d[i] = 1
-            else:
-                d[i] += 1
-        
-        for i in s:
-            d[i] -= 1
+        for c in s:
+            d[c] -= 1
             
-            if i not in stack:
-                # while loop check if we need to remove the itemS of stack and then 
-                #   append current char i after the loop to make the smallest lexicographical
-                    # 1st condition: if s not empty
-                    # 2nd condition: if the occurence of i is not 0 (still have more)
-                    # 3rd condition: if top of the stack has greater lexicographical order than i
-                
-                while stack and d[stack[-1]] > 0 and stack[-1] > i:
-                    stack.pop()
-                stack.append(i)
-        
+            # only add to stack if character doesn't exist in stack
+            if c not in stack:
+
+                # only pop if:
+                    # 1st: stack not empty
+                    # 2nd: stack top still have other occurrences
+                    # 3rd: stack top is lexicographically greater than current character
+                while stack and d[stack[-1]] != 0 and stack[-1] > c:
+                    stack.pop(-1)
+                stack.append(c)
         
         return ''.join(stack)
