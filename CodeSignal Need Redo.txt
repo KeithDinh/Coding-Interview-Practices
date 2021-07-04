@@ -1,0 +1,13 @@
+7 almostIncreasingSequence
+33 stringsRearrangement
+45 buildPalindrome
+59 spiralNumbers
+
+Never: 56 digitsProduct
+
+
+SQL
+movieDirectors
+27 combinationLock
+28 -> 31
+34
